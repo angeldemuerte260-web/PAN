@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Configuración | Dulce Trigo</title>
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="configuracion" data-rol="admin">
+<div class="layout">
+<header>
+  <div class="brand"><img src="../img/logo.svg" alt="Logo" width="36"><span data-cfg="nombre">Dulce Trigo</span></div>
+  <span id="saludo"></span>
+  <button id="salir" class="btn-sec">Cerrar sesión</button>
+</header>
+<nav id="menu"></nav>
+<main>
+<section>
+  <h1>Configuración</h1>
+  <p class="mut">Cambia los datos que ven los clientes en todo el sistema.</p>
+  <article class="panel">
+    <form id="formConfig" novalidate>
+      <div class="fila">
+        <div><label for="nombre">Nombre de la panadería</label><input id="nombre" type="text" maxlength="40"></div>
+        <div><label for="telefono">Teléfono</label><input id="telefono" type="tel"></div>
+        <div><label for="direccion">Dirección</label><input id="direccion" type="text"></div>
+        <div><label for="horno">Hoy se hornea</label><input id="horno" type="text"></div>
+      </div>
+      <label for="horario">Horario (puedes usar varias líneas)</label>
+      <textarea id="horario" rows="3"></textarea>
+      <label for="archivoFondo">Imagen de fondo</label>
+      <input id="archivoFondo" type="file" accept="image/*">
+      <img id="vistaFondo" class="vista-fondo" alt="Vista previa del fondo">
+      <button type="button" id="quitarFondo" class="btn-sec2">Usar fondo predeterminado</button>
+      <div id="error" class="error" role="alert"></div>
+      <button type="submit">Guardar cambios</button>
+    </form>
+  </article>
+</section>
+</main>
+<aside>
+  <h3>Horario</h3>
+  <p data-cfg="horario"></p>
+  <h3>Contacto</h3>
+  <p><span data-cfg="direccion"></span><br>Tel: <span data-cfg="telefono"></span></p>
+  <h3>Hoy se hornea</h3>
+  <p data-cfg="horno"></p>
+</aside>
+<footer>&copy; 2026 <span data-cfg="nombre">Dulce Trigo</span></footer>
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

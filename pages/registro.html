@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crear cuenta | Panadería Dulce Trigo</title>
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="registro" class="login-body">
+<main class="login-box">
+  <img src="../img/logo.svg" alt="Logo Dulce Trigo" width="72">
+  <h1>Crear cuenta</h1>
+  <p>Regístrate para comprar en <span data-cfg="nombre">Dulce Trigo</span></p>
+  <form id="formRegistro" novalidate>
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre">
+    <label for="usuario">Usuario (letras y números, 4 a 15)</label>
+    <input type="text" id="usuario">
+    <label for="correo">Correo</label>
+    <input type="email" id="correo">
+    <label for="clave">Contraseña (mínimo 6)</label>
+    <input type="password" id="clave">
+    <label for="clave2">Repetir contraseña</label>
+    <input type="password" id="clave2">
+    <div id="error" class="error" role="alert"></div>
+    <button type="submit">Registrarme</button>
+  </form>
+  <p class="enlace">¿Ya tienes cuenta? <a href="../index.html">Iniciar sesión</a></p>
+</main>
+<script src="../js/script.js"></script>
+</body>
+</html>

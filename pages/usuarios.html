@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usuarios | Dulce Trigo</title>
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="usuarios" data-rol="admin">
+<div class="layout">
+<header>
+  <div class="brand"><img src="../img/logo.svg" alt="Logo" width="36"><span data-cfg="nombre">Dulce Trigo</span></div>
+  <span id="saludo"></span>
+  <button id="salir" class="btn-sec">Cerrar sesión</button>
+</header>
+<nav id="menu"></nav>
+<main>
+<section>
+  <h1>Usuarios</h1>
+  <article class="panel">
+    <h2>Agregar usuario</h2>
+    <form id="formUsuario" novalidate>
+      <div class="fila">
+        <div><label for="nombre">Nombre completo</label><input id="nombre" type="text"></div>
+        <div><label for="usuario">Usuario</label><input id="usuario" type="text"></div>
+        <div><label for="correo">Correo</label><input id="correo" type="email"></div>
+        <div><label for="clave">Contraseña</label><input id="clave" type="password"></div>
+        <div><label for="rol">Rol</label><select id="rol"><option value="cliente">Cliente</option><option value="admin">Administrador</option></select></div>
+      </div>
+      <div id="error" class="error" role="alert"></div>
+      <button type="submit">Agregar usuario</button>
+    </form>
+  </article>
+  <article class="panel">
+    <div class="tabla-wrap"><table><thead><tr><th>Nombre</th><th>Usuario</th><th>Correo</th><th>Rol</th><th></th></tr></thead><tbody id="lista"></tbody></table></div>
+  </article>
+</section>
+</main>
+<aside>
+  <h3>Horario</h3>
+  <p data-cfg="horario"></p>
+  <h3>Contacto</h3>
+  <p><span data-cfg="direccion"></span><br>Tel: <span data-cfg="telefono"></span></p>
+  <h3>Hoy se hornea</h3>
+  <p data-cfg="horno"></p>
+</aside>
+<footer>&copy; 2026 <span data-cfg="nombre">Dulce Trigo</span></footer>
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>
